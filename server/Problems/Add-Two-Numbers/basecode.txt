@@ -1,0 +1,25 @@
+// basecode.txt
+
+// Function to be implemented by the user
+function add(x, y) {
+  // This function should be implemented by the user
+  throw new Error("Function 'add' not implemented");
+}
+
+// Function to verify the result (can be adjusted for different problems)
+function verify(result, x, y) {
+  return result === x + y;
+}
+
+// Include the runTestcases function directly in the base code
+function runTestcases(testcases) {
+  const results = [];
+
+  testcases.forEach(({ x, y }) => {
+    const result = add(x, y);
+    const isCorrect = verify(result, x, y);
+    results.push({ x, y, result, isCorrect });
+  });
+
+  return results;
+}
